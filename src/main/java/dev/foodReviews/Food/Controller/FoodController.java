@@ -1,18 +1,14 @@
 package dev.foodReviews.Food.Controller;
 
-import dev.foodReviews.Food.Model.Food;
-import dev.foodReviews.Food.Service.FoodService;
-import org.bson.types.ObjectId;
+import dev.foodReviews.Food.DTO.FoodDTO;
+import dev.foodReviews.Food.model.Food;
+import dev.foodReviews.Food.service.FoodService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/food")
@@ -22,14 +18,17 @@ public class FoodController {
     private FoodService foodService;
 
     @GetMapping
-    public ResponseEntity<List<Food>> allMovies(){
+    public ResponseEntity<List<Food>> getAllMovies(){
         return new ResponseEntity<List<Food>>(foodService.getAllFoods(), HttpStatus.OK);
     }
-
     @GetMapping("/{id}")
-    public ResponseEntity<Optional<Food>> getMovie(@PathVariable ObjectId id){
+    public ResponseEntity<FoodDTO> getFood(@PathVariable String id) throws Exception {
 
-        return new ResponseEntity<Optional<Food>>(foodService.getFood(id), HttpStatus.OK);
+        return ResponseEntity.ok(foodService.getFood(id));
     }
 
+    @PostMapping
+    public ResponseEntity<FoodDTO> createFood(@RequestBody FoodDTO foodDTO){
+        return ResponseEntity.status(HttpStatus.CREATED).body(foodService.create(foodDTO));
+    }
 }
