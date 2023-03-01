@@ -1,17 +1,14 @@
 package dev.foodReviews.Food.service;
 
-import dev.foodReviews.Food.DTO.FoodDTO;
+import dev.foodReviews.Food.dto.FoodDTO;
+import dev.foodReviews.Food.dto.FoodReviewDTO;
 import dev.foodReviews.Food.mapper.FoodMapper;
 import dev.foodReviews.Food.model.Food;
 import dev.foodReviews.Food.repository.FoodRepository;
 import lombok.RequiredArgsConstructor;
-import org.bson.types.ObjectId;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.lang.module.ResolutionException;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor

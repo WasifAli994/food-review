@@ -1,6 +1,6 @@
 package dev.foodReviews.Food.Controller;
 
-import dev.foodReviews.Food.DTO.FoodDTO;
+import dev.foodReviews.Food.dto.FoodDTO;
 import dev.foodReviews.Food.model.Food;
 import dev.foodReviews.Food.service.FoodService;
 import org.springframework.beans.factory.annotation.Autowired;
