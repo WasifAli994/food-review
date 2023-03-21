@@ -10,5 +10,5 @@ public class FoodDTO {
 
     private String name;
     private String type;
-    private List<Review> reviewsId;
+    private List<Review> reviews;
 }
