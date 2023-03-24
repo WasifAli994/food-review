@@ -1,7 +1,7 @@
 package dev.foodReviews.Food.controller;
 
 import dev.foodReviews.Food.dto.FoodDTO;
-import dev.foodReviews.Food.model.Food;
+import dev.foodReviews.Food.model.FoodMongo;
 import dev.foodReviews.Food.service.FoodServiceMongo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,8 +18,8 @@ public class FoodControllerMongo {
     private FoodServiceMongo foodServiceMongo;
 
     @GetMapping
-    public ResponseEntity<List<Food>> getAllMovies(){
-        return new ResponseEntity<List<Food>>(foodServiceMongo.getAllFoods(), HttpStatus.OK);
+    public ResponseEntity<List<FoodMongo>> getAllMovies(){
+        return new ResponseEntity<List<FoodMongo>>(foodServiceMongo.getAllFoods(), HttpStatus.OK);
     }
     @GetMapping("/{id}")
     public ResponseEntity<FoodDTO> getFood(@PathVariable String id) throws Exception {

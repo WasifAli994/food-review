@@ -1,6 +1,6 @@
 package dev.foodReviews.Food.dto;
 
-import dev.foodReviews.Food.model.Review;
+import dev.foodReviews.Food.model.ReviewMongo;
 import lombok.Data;
 
 import java.util.List;
@@ -10,5 +10,5 @@ public class FoodDTO {
 
     private String name;
     private String type;
-    private List<Review> reviews;
+    private List<ReviewMongo> reviewMongos;
 }
