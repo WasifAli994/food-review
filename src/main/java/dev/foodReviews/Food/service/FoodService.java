@@ -18,12 +18,16 @@ public class FoodService {
     }
 
     public void createFood(Food food){
-
         foodRepository.save(food);
         System.out.println("Added new Food!");
     }
 
     public List<Food> getAllFood(){
         return foodRepository.findAll();
+    }
+
+    public Food foodById(long id){
+
+        return foodRepository.findByFoodId(id);
     }
 }

@@ -1,6 +1,5 @@
 package dev.foodReviews.Food.dto;
 
-import dev.foodReviews.Food.model.ReviewMongo;
 import lombok.Data;
 
 import java.util.List;
