@@ -27,9 +27,8 @@ public class FoodController {
     public void createFood(@RequestBody Food food){
         foodService.createFood(food);
     }
-    @GetMapping("/{foodId}")
+    /*@GetMapping("/{foodId}")
     public ResponseEntity<Food> getFoodById(@PathVariable long foodId){
         return new ResponseEntity<>(foodService.foodById(foodId),HttpStatus.OK);
-    }
-
+    }*/
 }

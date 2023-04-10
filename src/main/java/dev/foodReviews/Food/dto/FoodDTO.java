@@ -9,5 +9,5 @@ public class FoodDTO {
 
     private String name;
     private String type;
-    private List<ReviewMongo> reviewMongos;
+    //private List<ReviewMongo> reviewMongos;
 }

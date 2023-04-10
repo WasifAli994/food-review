@@ -10,10 +10,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @Table(name = "review")
-public class Review {
+public class Review extends BaseEntity{
 
-    @Id
-    private int id;
     private String text;
     @ManyToOne
     @JoinColumn(name = "food_id", nullable = false)

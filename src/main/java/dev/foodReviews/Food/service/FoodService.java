@@ -26,8 +26,8 @@ public class FoodService {
         return foodRepository.findAll();
     }
 
-    public Food foodById(long id){
+  /*  public Food foodById(long id){
 
         return foodRepository.findByFoodId(id);
-    }
+    }*/
 }

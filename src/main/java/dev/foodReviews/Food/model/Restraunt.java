@@ -9,13 +9,9 @@ import lombok.*;
 @Getter
 @Data
 @Table(name = "restaurant")
-public class Restraunt {
+public class Restraunt extends BaseEntity{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
     private String name;
     private String category;
     private String location;
-
 }

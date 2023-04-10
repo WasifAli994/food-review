@@ -12,10 +12,8 @@ import java.util.Set;
 @NoArgsConstructor
 @Data
 @Table(name = "food")
-public class Food {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Food extends BaseEntity{
+
     private String name;
     private String type;
     @OneToMany

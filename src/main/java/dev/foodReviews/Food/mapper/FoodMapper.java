@@ -6,8 +6,8 @@ import org.mapstruct.Mapper;
 @Mapper(componentModel = "spring")
 public interface FoodMapper {
 
-    FoodDTO intoDTO(FoodMongo foodMongo);
+//    FoodDTO intoDTO(FoodMongo foodMongo);
 
-    FoodMongo intoDocument(FoodDTO foodDTO);
+//    FoodMongo intoDocument(FoodDTO foodDTO);
 
 }
